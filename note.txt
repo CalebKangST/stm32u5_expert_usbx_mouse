@@ -1,0 +1,15 @@
+1. interut enable
+  - EXTI - PC13
+  - USB FS
+
+3. MX_USB_OTG_HS_PCD_Init(); main.c에서 빼기
+4. DCD controller from CubeMX
+5. interrupt for usb
+6. usb gpio speed high
+7. usb interrupt priority -> 6 : solved problem with priority that make use disconnection after 3minute
+8. Fifo setting.
+  HAL_PCDEx_SetRxFiFo(&hpcd_USB_OTG_FS, 0x80);
+  /* Set Tx FIFO 0 */
+  HAL_PCDEx_SetTxFiFo(&hpcd_USB_OTG_FS, 0, 0x40);
+  /* Set Tx FIFO 1 */
+  HAL_PCDEx_SetTxFiFo(&hpcd_USB_OTG_FS, 1, 0x40);
