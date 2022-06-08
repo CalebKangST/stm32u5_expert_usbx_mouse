@@ -54,7 +54,7 @@
 /* USB stack size */
 #define USBX_APP_STACK_SIZE                          1024
 /* USB memory size */
-#define USBX_MEMORY_SIZE                             (32 * 1024)
+#define USBX_MEMORY_SIZE                             (4 * 1024)
 
 
 /* ux_app_thread struct */
